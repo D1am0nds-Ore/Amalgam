@@ -769,6 +769,8 @@ void CESP::DrawPlayers()
 		return;
 
 	const auto& fFont = H::Fonts.GetFont(FONT_ESP);
+	const auto& fFontName = H::Fonts.GetFont(FONT_NAME);
+	const auto& fFontConds = H::Fonts.GetFont(FONT_CONDS);
 	const int nTall = fFont.m_nTall + H::Draw.Scale(2);
 	for (auto& [pEntity, tCache] : m_mPlayerCache)
 	{
@@ -825,15 +827,15 @@ void CESP::DrawPlayers()
 			switch (iMode)
 			{
 			case TextTop:
-				H::Draw.StringOutlined(fFont, m, t - tOffset, tColor, tOutline, ALIGN_BOTTOM, sText.c_str());
+				H::Draw.StringOutlined(fFontName, m, t - tOffset, tColor, tOutline, ALIGN_BOTTOM, sText.c_str());
 				tOffset += nTall;
 				break;
 			case TextBottom:
-				H::Draw.StringOutlined(fFont, m, b + bOffset, tColor, tOutline, ALIGN_TOP, sText.c_str());
+				H::Draw.StringOutlined(fFontConds, m, b + bOffset, tColor, tOutline, ALIGN_TOP, sText.c_str());
 				bOffset += nTall;
 				break;
 			case TextRight:
-				H::Draw.StringOutlined(fFont, r, t + iVerticalOffset + rOffset, tColor, tOutline, ALIGN_TOPLEFT, sText.c_str());
+				H::Draw.StringOutlined(fFontConds, r, t + iVerticalOffset + rOffset, tColor, tOutline, ALIGN_TOPLEFT, sText.c_str());
 				rOffset += nTall;
 				break;
 			case TextHealth:
@@ -867,6 +869,8 @@ void CESP::DrawBuildings()
 		return;
 
 	const auto& fFont = H::Fonts.GetFont(FONT_ESP);
+	const auto& fFontName = H::Fonts.GetFont(FONT_NAME);
+	const auto& fFontConds = H::Fonts.GetFont(FONT_CONDS);
 	const int nTall = fFont.m_nTall + H::Draw.Scale(2);
 	for (auto& [pEntity, tCache] : m_mBuildingCache)
 	{
@@ -896,15 +900,15 @@ void CESP::DrawBuildings()
 			switch (iMode)
 			{
 			case TextTop:
-				H::Draw.StringOutlined(fFont, m, t - tOffset, tColor, tOutline, ALIGN_BOTTOM, sText.c_str());
+				H::Draw.StringOutlined(fFontName, m, t - tOffset, tColor, tOutline, ALIGN_BOTTOM, sText.c_str());
 				tOffset += nTall;
 				break;
 			case TextBottom:
-				H::Draw.StringOutlined(fFont, m, b + bOffset, tColor, tOutline, ALIGN_TOP, sText.c_str());
+				H::Draw.StringOutlined(fFontConds, m, b + bOffset, tColor, tOutline, ALIGN_TOP, sText.c_str());
 				bOffset += nTall;
 				break;
 			case TextRight:
-				H::Draw.StringOutlined(fFont, r, t + iVerticalOffset + rOffset, tColor, tOutline, ALIGN_TOPLEFT, sText.c_str());
+				H::Draw.StringOutlined(fFontConds, r, t + iVerticalOffset + rOffset, tColor, tOutline, ALIGN_TOPLEFT, sText.c_str());
 				rOffset += nTall;
 				break;
 			case TextHealth:
@@ -920,6 +924,8 @@ void CESP::DrawBuildings()
 void CESP::DrawWorld()
 {
 	const auto& fFont = H::Fonts.GetFont(FONT_ESP);
+	const auto& fFontName = H::Fonts.GetFont(FONT_NAME);
+	const auto& fFontConds = H::Fonts.GetFont(FONT_CONDS);
 	const int nTall = fFont.m_nTall + H::Draw.Scale(2);
 	for (auto& [pEntity, tCache] : m_mWorldCache)
 	{
@@ -942,15 +948,15 @@ void CESP::DrawWorld()
 			switch (iMode)
 			{
 			case TextTop:
-				H::Draw.StringOutlined(fFont, m, t - tOffset, tColor, tOutline, ALIGN_BOTTOM, sText.c_str());
+				H::Draw.StringOutlined(fFontName, m, t - tOffset, tColor, tOutline, ALIGN_BOTTOM, sText.c_str());
 				tOffset += nTall;
 				break;
 			case TextBottom:
-				H::Draw.StringOutlined(fFont, m, b + bOffset, tColor, tOutline, ALIGN_TOP, sText.c_str());
+				H::Draw.StringOutlined(fFontConds, m, b + bOffset, tColor, tOutline, ALIGN_TOP, sText.c_str());
 				bOffset += nTall;
 				break;
 			case TextRight:
-				H::Draw.StringOutlined(fFont, r, t + iVerticalOffset + rOffset, tColor, tOutline, ALIGN_TOPLEFT, sText.c_str());
+				H::Draw.StringOutlined(fFontConds, r, t + iVerticalOffset + rOffset, tColor, tOutline, ALIGN_TOPLEFT, sText.c_str());
 				rOffset += nTall;
 			}
 		}

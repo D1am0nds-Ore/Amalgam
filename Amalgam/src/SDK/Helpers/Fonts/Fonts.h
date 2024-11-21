@@ -1,11 +1,15 @@
 #pragma once
 #include "../../../Utils/Feature/Feature.h"
+#include "../../Definitions/Interfaces.h"
+#include "../../Vars.h"
 #include "../../Definitions/Interfaces/IMatSystemSurface.h"
 #include <unordered_map>
 
 enum EFonts
 {
 	FONT_ESP,
+	FONT_NAME,
+	FONT_CONDS,
 	FONT_INDICATORS
 };
 
